@@ -1,0 +1,41 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+img {
+    max-width: 100%;
+    height: auto;
+}
+.card:hover {
+    transform: scale(1.05);
+    transition: transform .2s;
+  }
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: white;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .title {
+    background-color: #4CAF50;
+    color: white; 
+    padding: 10px; 
+  }
+  
+
+.close-button {
+  background-color: transparent; /* Sin fondo */
+  color: black; /* Color de la X */
+  font-size: 24px; /* Tamaño de la X */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  float: right; /* Alineación a la derecha */
+}
+
+.close-button:hover {
+  color: red; /* Cambia el color de la X al pasar el mouse */
+}

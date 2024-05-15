@@ -1,0 +1,32 @@
+<h2 class="text-center title">PACIENTES</h2>
+<hr />
+
+<!-- Use a separate component for the detail view -->
+<app-paciente-detail *ngIf="selected" [pacienteDetail]="selectedPaciente">
+  <button class="close-button" (click)="closeDetail()">x</button>
+</app-paciente-detail>
+
+<div class="container-fluid">
+  <div class="col-6">
+    <table class="table" style="margin-top: 25px; margin-left: 15px;" width="40%">
+      <thead>
+        <tr>
+          <th class="h4" style="background-color:grey;">Nombre</th>
+          <th class="h4" style="background-color:grey;">Edad</th>
+          
+        </tr>
+      </thead >
+      <tbody class="thead-light" style="background-color:aliceblue;">
+        <tr *ngFor = "let c of pacientes">
+          <td class="thead-light" style="background-color:aliceblue;">
+            <dd>{{c.nombre}}</dd>
+         
+          <td class="thead-light" style="background-color:aliceblue;">
+            <dd>{{c.edad}}</dd>
+         
+        </tr>
+      </tbody>
+    </table>
+    <div><strong>Cantidad de menores de edad:</strong> {{ calcularMenores() }}</div>
+  </div>
+</div>
